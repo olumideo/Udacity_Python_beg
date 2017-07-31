@@ -1,0 +1,31 @@
+import turtle
+
+def draw_kite(some_turtle):
+    some_turtle.left(120)
+    some_turtle.forward(100)
+    some_turtle.right(60)
+    some_turtle.forward(100)
+    some_turtle.right(120)
+    some_turtle.forward(100)
+    some_turtle.right(60)
+    some_turtle.forward(100)
+
+def draw_shapes():
+    window = turtle.Screen()
+    window.bgcolor("teal")
+    
+    flower = turtle.Turtle()    
+    flower.shape("turtle")
+    flower.color("white")
+    flower.speed(5)
+    n=36
+    for i in range(1,n+1):
+        draw_kite(flower)
+        flower.home()
+        flower.right(i*(360/n))
+    flower.right(90)
+    flower.fd(300)
+    
+    window.exitonclick()
+
+draw_shapes()
